@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Cadastro</title>
+</head>
+<body>
+	<form action="/" method="post">
+		<label>Nome</label>
+		<input name="name">
+		<label>Sobre nome</label>
+		<input name="lastName">
+		
+		<button type="submit">Salvar</button>
+	</form>
+	
+	<table>
+		<tr th:each = "pessoa : ${pessoas}">
+			<td th:text = "${pessoa.id}"></td>
+			<td th:text = "${pessoa.name}"></td>
+			<td th:text = "${pessoa.lastName}"></td>
+		</tr>
+	</table>
+</body>
+</html>
